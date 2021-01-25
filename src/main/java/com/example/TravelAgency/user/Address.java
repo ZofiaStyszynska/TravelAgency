@@ -1,4 +1,4 @@
-package com.example.TravelAgency.userDb;
+package com.example.TravelAgency.user;
 
 
 

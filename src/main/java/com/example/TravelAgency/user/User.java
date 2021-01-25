@@ -1,24 +1,26 @@
-package com.example.TravelAgency.userDb;
+package com.example.TravelAgency.user;
 
+import com.sun.xml.bind.v2.TODO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
-@EqualsAndHashCode(callSuper = true)
+//@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class User extends BaseEntity {
+
+public class User {
 
 
+    @GeneratedValue
+    @Id
+    private Long id;
+    private boolean deleted;
     private String firstName;
     private String lastName;
     private String email;
@@ -27,6 +29,6 @@ public class User extends BaseEntity {
 
     @OneToMany
     @JoinColumn
-    private List<Trip> purchasedTrips;
+    private List<Trip> purchasedTrips; //TODO
 
 }

@@ -1,7 +1,6 @@
-package com.example.TravelAgency.userDb;
+package com.example.TravelAgency.user;
 
 import lombok.Data;
-import lombok.Value;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
