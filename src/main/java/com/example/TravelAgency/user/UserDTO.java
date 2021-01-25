@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 public class UserDTO {
 
-   // Long id;
+   Long id;
     String firstName;
     String lastName;
     String email;
@@ -14,7 +14,7 @@ public class UserDTO {
 
     public static UserDTO fromUser(User user) {
         return new UserDTO(
-               // user.getId(),
+               user.getId(),
                 user.getFirstName(),
                 user.getLastName(),
                 user.getEmail(),

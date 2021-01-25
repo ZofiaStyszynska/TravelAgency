@@ -28,7 +28,7 @@ public class User {
     private Address address;
 
     @OneToMany
-    @JoinColumn
+
     private List<Trip> purchasedTrips; //TODO
 
 }

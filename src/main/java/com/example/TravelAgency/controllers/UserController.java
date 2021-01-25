@@ -28,11 +28,11 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{lastName}")
-    public @ResponseBody
-    List<UserDTO> getUsersByLastName(@PathVariable String lastName) {
-        return userService.getUsersByLastName(lastName);
-    }
+//    @GetMapping("/{lastName}")
+//    public @ResponseBody
+//    List<UserDTO> getUsersByLastName(@PathVariable String lastName) {
+//        return userService.getUsersByLastName(lastName);
+//    }
 
     @GetMapping("/{lastName}")
     public ResponseEntity<List<UserDTO>> getUsersByLastName1(@PathVariable String lastName) {

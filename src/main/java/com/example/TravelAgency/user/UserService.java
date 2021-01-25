@@ -32,10 +32,9 @@ public class UserService {
     }
 
     public Long deleteUser (Long id){
-        final User user = userRepository.findUserById(id);
-        user.setDeleted(true);
-        System.out.println("User with id number: " + id + " was deleted");
-        return user.getId();
+        final Optional<User> optionalUser = userRepository.findById(id);
+        optionalUser.ifPresent(user -> user.setDeleted(true));
+        return optionalUser.get().getId();
 
     } //TODO
 
