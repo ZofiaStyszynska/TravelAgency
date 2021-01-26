@@ -18,7 +18,10 @@ public class Trip extends BaseEntity {
 
 
     private String tripName;
-    @OneToOne     // jaka powinna tu być relacja ?
+    private Continent continent;
+    @OneToOne      //czy ta relacja tu będzie ok ?
+    private Country country;
+    @OneToOne     // czy ta relacja tu będzie ok ?
     private City city;
     private LocalDate tripStartDate;
     private LocalDate tripEndDate;

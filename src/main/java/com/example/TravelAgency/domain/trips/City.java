@@ -17,6 +17,6 @@ import javax.persistence.OneToOne;
 public class City extends BaseEntity {
 
     private String cityName;
-    @OneToOne//jaka powinna być tu relacja?
+    @OneToOne // czy ta relacja będzie tu ok ?
     private Country country;
 }
