@@ -1,5 +1,6 @@
-package com.example.TravelAgency.domain.trips;
+package com.example.TravelAgency.domain.trips.city;
 
+import com.example.TravelAgency.domain.trips.country.Country;
 import lombok.Value;
 
 

@@ -1,5 +1,9 @@
-package com.example.TravelAgency.domain.trips;
+package com.example.TravelAgency.domain.trips.trip;
 
+import com.example.TravelAgency.domain.trips.Continent;
+import com.example.TravelAgency.domain.trips.city.City;
+import com.example.TravelAgency.domain.trips.country.Country;
+import com.example.TravelAgency.domain.trips.trip.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
