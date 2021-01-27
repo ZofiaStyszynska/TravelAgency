@@ -1,8 +1,10 @@
-package com.example.TravelAgency.domain.trips;
+package com.example.TravelAgency.domain.trips.trip;
 
+import com.example.TravelAgency.domain.trips.Continent;
+import com.example.TravelAgency.domain.trips.city.City;
+import com.example.TravelAgency.domain.trips.country.Country;
 import lombok.Value;
 
-import javax.persistence.OneToOne;
 import java.time.LocalDate;
 
 @Value
