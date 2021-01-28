@@ -8,8 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 
@@ -21,10 +20,11 @@ public class Trip extends BaseEntity {
 
 
     private String tripName;
+    @Enumerated(value = EnumType.STRING)
     private Continent continent;
-    @OneToOne      //czy ta relacja tu będzie ok ?
+    @ManyToOne
     private Country country;
-    @OneToOne     // czy ta relacja tu będzie ok ?
+    @ManyToOne
     private City city;
     private LocalDate tripStartDate;
     private LocalDate tripEndDate;
