@@ -34,7 +34,7 @@ public class TripController {
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
     @GetMapping("/{continent}")
-    public ResponseEntity<List<TripDTO>> getTripByContinent (@PathVariable Continent continent) {
+    public ResponseEntity<List<TripDTO>> getTripByContinent (@PathVariable Country continent) {
         List<TripDTO> tripDTOList = tripService.getTripByContinent(continent);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
