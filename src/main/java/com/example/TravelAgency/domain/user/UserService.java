@@ -1,7 +1,8 @@
-package com.example.TravelAgency.user;
+package com.example.TravelAgency.domain.user;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -31,8 +32,7 @@ public class UserService {
                 userDTO.getFirstName(),
                 userDTO.getLastName(),
                 userDTO.getEmail(),
-                userDTO.getAddress(),
-                userDTO.getPurchasedTrips()));
+                userDTO.getAddress(),new ArrayList<>()));
         return user.getId();
     }
 
@@ -41,7 +41,7 @@ public class UserService {
         optionalUser.ifPresent(user -> user.setDeleted(true));
         return optionalUser.get().getId();
 
-    } //TODO
+    }
 
 
 

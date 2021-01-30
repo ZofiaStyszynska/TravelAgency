@@ -1,7 +1,7 @@
 package com.example.TravelAgency.controllers;
 
-import com.example.TravelAgency.user.UserDTO;
-import com.example.TravelAgency.user.UserService;
+import com.example.TravelAgency.domain.user.UserDTO;
+import com.example.TravelAgency.domain.user.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

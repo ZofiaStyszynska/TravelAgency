@@ -1,4 +1,4 @@
-package com.example.TravelAgency.user;
+package com.example.TravelAgency.domain.user;
 
 import lombok.Data;
 
