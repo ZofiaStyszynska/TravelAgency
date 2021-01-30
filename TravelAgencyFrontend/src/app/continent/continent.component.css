@@ -1,0 +1,10 @@
+.background__table{
+  background-color: rgba(255, 238, 0, 0.596);
+  border-collapse: collapse;
+  width: 100%;
+  border: 0px;
+}
+.buttons__continens{
+  display: block;
+  margin: 0 auto;
+}
