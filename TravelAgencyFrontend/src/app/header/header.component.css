@@ -2,14 +2,14 @@
   background: rgb(255, 94, 0);
 }
 
-img{
+.img{
   max-width: 700px;
   height: auto;
   display: block;
   align-items: center;
 }
 
-img.absolut{
+.img.absolute{
   position: absolute;
   left: 0;
   right: 0;

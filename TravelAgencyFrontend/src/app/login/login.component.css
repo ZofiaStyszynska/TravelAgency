@@ -1,0 +1,13 @@
+.margins{
+  margin-top: 200px;
+}
+
+.font {
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.buttons_login {
+  display: block;
+  margin: 0 auto;
+}
