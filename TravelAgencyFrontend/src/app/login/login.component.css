@@ -1,13 +1,14 @@
 .margins{
   margin-top: 200px;
+  margin-left: 200px;
 }
 
 .font {
-  font-family: Arial;
+  font-family: "Arial Black", serif;
   font-size: 20px;
 }
 
-.buttons_login {
+.buttons__login {
   display: block;
   margin: 0 auto;
 }
