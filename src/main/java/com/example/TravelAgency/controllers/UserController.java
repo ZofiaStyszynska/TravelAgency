@@ -22,20 +22,16 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDTO> getUser(@PathVariable Long id) {
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         return userService.getUserByID(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
-//    @GetMapping("/{lastName}")
-//    public @ResponseBody
-//    List<UserDTO> getUsersByLastName(@PathVariable String lastName) {
-//        return userService.getUsersByLastName(lastName);
-//    }
+
 
     @GetMapping("/{lastName}")
-    public ResponseEntity<List<UserDTO>> getUsersByLastName1(@PathVariable String lastName) {
+    public ResponseEntity<List<UserDTO>> getUsersByLastName(@PathVariable String lastName) {
         List<UserDTO> usersWithTeSameName = userService.getUsersByLastName(lastName);
 
         return new ResponseEntity<List<UserDTO>>(usersWithTeSameName, HttpStatus.OK);
