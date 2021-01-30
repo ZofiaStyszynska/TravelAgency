@@ -27,8 +27,8 @@ public class User {
     @Embedded
     private Address address;
 
-    @OneToMany
+   // @OneToMany
 
-    private List<Trip> purchasedTrips; //TODO
+    //private List<> purchasedTrips; //TODO
 
 }
