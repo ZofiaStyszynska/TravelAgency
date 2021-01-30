@@ -11,6 +11,7 @@ public class UserDTO {
     String lastName;
     String email;
     Address address;
+    List <TripDTO> purchasedTrips;
 
     public static UserDTO fromUser(User user) {
         return new UserDTO(
@@ -18,7 +19,8 @@ public class UserDTO {
                 user.getFirstName(),
                 user.getLastName(),
                 user.getEmail(),
-                user.getAddress()
+                user.getAddress(),
+                user.getPurchasedTrips()
         );
     }
 
