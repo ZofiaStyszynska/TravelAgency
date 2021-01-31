@@ -1,24 +1,27 @@
-package com.example.TravelAgency.user;
+package com.example.TravelAgency.domain.user;
 
-import com.sun.xml.bind.v2.TODO;
+import com.example.TravelAgency.domain.trips.trip.Trip;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 //@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
+@Builder
 public class User {
 
 
     @GeneratedValue
     @Id
+
     private Long id;
     private boolean deleted;
     private String firstName;
@@ -28,7 +31,6 @@ public class User {
     private Address address;
 
    @OneToMany
-
-    private List<Trip> purchasedTrips; //TODO
+   private List<Trip> purchasedTrips = new ArrayList<>();
 
 }
