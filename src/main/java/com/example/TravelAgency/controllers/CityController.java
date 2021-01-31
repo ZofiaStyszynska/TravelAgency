@@ -1,6 +1,8 @@
-package com.example.TravelAgency.domain.trips.city;
+package com.example.TravelAgency.controllers;
 
 import com.example.TravelAgency.domain.trips.Continent;
+import com.example.TravelAgency.domain.trips.city.CityDTO;
+import com.example.TravelAgency.domain.trips.city.CityService;
 import com.example.TravelAgency.domain.trips.country.Country;
 import com.example.TravelAgency.domain.trips.country.CountryDTO;
 import org.springframework.http.HttpStatus;

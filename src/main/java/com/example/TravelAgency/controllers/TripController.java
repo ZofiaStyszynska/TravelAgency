@@ -1,8 +1,10 @@
-package com.example.TravelAgency.domain.trips.trip;
+package com.example.TravelAgency.controllers;
 
 import com.example.TravelAgency.domain.trips.Continent;
 import com.example.TravelAgency.domain.trips.city.City;
 import com.example.TravelAgency.domain.trips.country.Country;
+import com.example.TravelAgency.domain.trips.trip.TripDTO;
+import com.example.TravelAgency.domain.trips.trip.TripService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
