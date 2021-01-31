@@ -12,12 +12,11 @@ export class MainSiteComponent implements OnInit {
   constructor() {
 
     this.continents = [
-    {imgContinent: "https://cdn.pixabay.com/photo/2015/04/09/16/31/africa-714714_960_720.png", buttonContinent: "Afryka"}, // Afryka
-    {imgContinent: 2, buttonContinent: 2}, // Ameryka Północna
-    {imgContinent: 3, buttonContinent: 3}, // Ameryka Południowa
-    {imgContinent: 4, buttonContinent: 4}, // Australia
-    {imgContinent: 5, buttonContinent: 5}, // Azja
-    {imgContinent: 6, buttonContinent: 6}  // Europa
+    {imgContinent: "https://www.toptravel.pl/wp-content/uploads/Afryka/Afryka-wycieczki.png", buttonContinent: "Afryka"}, // Afryka
+    {imgContinent: "https://www.toptravel.pl/wp-content/uploads/Ameryka-Srodkowa-wycieczki.png", buttonContinent: "Ameryka środkowa"}, // Ameryka środkowa
+    {imgContinent: "https://www.toptravel.pl/wp-content/uploads/Australia/Australia-wycieczki.png", buttonContinent: "Australia"}, // Australia
+    {imgContinent: "https://www.toptravel.pl/wp-content/uploads/Azja/Azja-wycieczki.png", buttonContinent: "Azja"}, // Azja
+    {imgContinent: "https://www.toptravel.pl/wp-content/uploads/Europa/Europa-wycieczki.png", buttonContinent: "Europa"}  // Europa
 
   ];
   }
