@@ -1,5 +1,6 @@
 package com.example.TravelAgency.domain.user;
 
+import com.example.TravelAgency.domain.base.BaseEntity;
 import com.example.TravelAgency.domain.trips.trip.Trip;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,14 +17,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class User extends BaseEntity {
 
-
-    @GeneratedValue
-    @Id
-
-    private Long id;
-    private boolean deleted;
     private String firstName;
     private String lastName;
     private String email;

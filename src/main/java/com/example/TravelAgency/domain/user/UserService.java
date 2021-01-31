@@ -28,7 +28,7 @@ public class UserService {
     }
 
     public Long addUser (UserDTO userDTO){
-        final User user = userRepository.save(new User(null,false,
+        final User user = userRepository.save(new User(
                 userDTO.getFirstName(),
                 userDTO.getLastName(),
                 userDTO.getEmail(),
