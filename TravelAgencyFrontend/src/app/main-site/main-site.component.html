@@ -5,33 +5,25 @@
   <app-header></app-header>
 
   <div class="table__center">
-    <table>
-      <tbody>
-      <tr>
-        <td>
-          <app-continent></app-continent>
-        </td>
-        <td>
-          <app-continent></app-continent>
-        </td>
-        <td>
-          <app-continent></app-continent>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <app-continent></app-continent>
-        </td>
-        <td>
-          <app-continent></app-continent>
-        </td>
-        <td>
-          <app-continent></app-continent>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
 
+    <table>
+
+      <tbody>
+
+      <tr>
+
+        <td *ngFor="let continent of continents">
+
+          <app-continent [continentName]="continent.buttonContinent" [imgLink]="continent.imgContinent"></app-continent>
+
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
 
 </main>
