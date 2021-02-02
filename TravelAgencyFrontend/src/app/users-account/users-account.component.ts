@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from "../user";
 import {Trip} from "../trip";
 import {TRIPS} from "../mock-trips";
+import {MatCard} from "@angular/material/card";
 
 @Component({
   selector: 'app-users-account',

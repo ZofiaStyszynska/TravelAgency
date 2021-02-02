@@ -1,25 +1,38 @@
+
 <app-header></app-header>
 <div class="background__account">
-<h2 class="font__user">Konto użytkownika {{user.firstName +" " + user.lastName}}</h2>
-<div><span>id: </span>{{user.id}}</div>
-<div><span>Adres zamieszkania: </span>{{user.address}}</div>
-<div><span>Adres email: </span>{{user.email}}</div>
+  <h2 class="font__user">Konto użytkownika {{user.firstName + " " + user.lastName}}</h2>
+  <mat-card class="mat">
+    <div><span class="font__user">id: </span>{{user.id}}</div>
+    <div><span class="font__user">Adres zamieszkania: </span>{{user.address}}</div>
+    <div><span class="font__user">Adres email: </span>{{user.email}}</div>
+  </mat-card>
+  <p></p>
+  <h3 class="font__user">Edycja danych </h3>
+  <mat-card class="mat">
+  <div>
+    <label><p class="font__user">Imię:
+      <input [(ngModel)]="user.firstName" placeholder="firstName"/></p>
+    </label>
 
-<div><span>Edycja danych </span></div>
-<div>
-  <label >Imię:
-    <input [(ngModel)]="user.firstName" placeholder="firstName"/>
-  </label>
-</div>
-<div>
-  <label>Nazwisko:
-    <input [(ngModel)]="user.lastName" placeholder="lastName"/>
-  </label>
-</div>
-<h2>Wykupione wycieczki</h2>
-<ul class="trips">
-  <li *ngFor="let trip of trips">
-    <span class="badge">{{trip.id}}</span> {{trip.tripName}}
-  </li>
-</ul>
+    <label><p class="font__user">Nazwisko:
+      <input [(ngModel)]="user.lastName" placeholder="lastName"/></p>
+    </label>
+    <label><p class="font__user">email:
+      <input [(ngModel)]="user.email" placeholder="email"/></p>
+    </label>
+  </div>
+  </mat-card>
+  <div>
+  <h3 class="font__user">Wykupione wycieczki</h3>
+  <ul class="trips">
+    <li *ngFor="let trip of trips">
+      <span class="badge">{{trip.id}}</span> {{trip.tripName}}
+    </li>
+  </ul>
+  </div>
+  <p>
+  </p>
+
+
 </div>

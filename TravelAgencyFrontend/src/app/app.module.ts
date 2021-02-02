@@ -9,6 +9,10 @@ import { MainSiteComponent } from './main-site/main-site.component';
 import { UsersAccountComponent } from './users-account/users-account.component';
 import {FormsModule} from "@angular/forms";
 import {Route, RouterModule, Routes} from "@angular/router";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from "@angular/material/card";
+
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -29,7 +33,11 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
