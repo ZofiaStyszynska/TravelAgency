@@ -16,6 +16,12 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public List<UserDTO> getAllUsers(){
+        return userRepository.findAll().stream()
+                .map(UserDTO::fromUser)
+                .collect(Collectors.toList());
+    }
+
     public Optional<UserDTO> getUserByID(Long id) {
         return userRepository.findById(id)
                 .map(UserDTO::fromUser);
