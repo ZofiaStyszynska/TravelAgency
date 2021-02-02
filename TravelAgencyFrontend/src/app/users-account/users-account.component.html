@@ -1,11 +1,13 @@
-<h2>Konto użytkownika {{user.firstName +" " + user.lastName}}</h2>
+<app-header></app-header>
+<div class="background__account">
+<h2 class="font__user">Konto użytkownika {{user.firstName +" " + user.lastName}}</h2>
 <div><span>id: </span>{{user.id}}</div>
 <div><span>Adres zamieszkania: </span>{{user.address}}</div>
 <div><span>Adres email: </span>{{user.email}}</div>
 
 <div><span>Edycja danych </span></div>
 <div>
-  <label>Imię:
+  <label >Imię:
     <input [(ngModel)]="user.firstName" placeholder="firstName"/>
   </label>
 </div>
@@ -13,4 +15,11 @@
   <label>Nazwisko:
     <input [(ngModel)]="user.lastName" placeholder="lastName"/>
   </label>
+</div>
+<h2>Wykupione wycieczki</h2>
+<ul class="trips">
+  <li *ngFor="let trip of trips">
+    <span class="badge">{{trip.id}}</span> {{trip.tripName}}
+  </li>
+</ul>
 </div>

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../user";
+import {Trip} from "../trip";
+import {TRIPS} from "../mock-trips";
 
 @Component({
   selector: 'app-users-account',
@@ -13,10 +15,11 @@ export class UsersAccountComponent implements OnInit {
     firstName: "Adam",
     lastName: "Kowalski",
     email : "adamk@wp.pl",
-    address: "Poznań, ul. Ratajczaka 124"
-
-
+    address: "Poznań, ul. Ratajczaka 124",
+    purchasedTrips: TRIPS,
   }
+trips = TRIPS;
+
 
   constructor() {
   }
@@ -24,6 +27,7 @@ export class UsersAccountComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
 
 
 }
