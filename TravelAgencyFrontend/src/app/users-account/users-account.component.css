@@ -1,0 +1,80 @@
+/* HeroesComponent's private CSS styles */
+
+.background__account {
+  background-color: rgb(247, 165, 43);
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding: 40px;
+}
+.mat{
+  background-color: palegoldenrod;
+}
+.font__user{
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold ;
+  color: brown;
+
+}
+.user.badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+.trips {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  color: brown;
+  font-family: Arial, sans-serif;
+}
+.trips li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: palegoldenrod;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.trips li:hover {
+  color: #607D8B;
+  background-color: chocolate;
+  left: .1em;
+}
+.trips li.selected {
+  background-color: darkorange;
+  color: white;
+}
+.trips li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.trips .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: chocolate;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}

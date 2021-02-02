@@ -1,0 +1,29 @@
+<main class="background__main">
+
+  <app-login></app-login>
+
+  <app-header></app-header>
+
+  <div class="table__center">
+
+    <table>
+
+      <tbody>
+
+      <tr>
+
+        <td *ngFor="let continent of continents">
+
+          <app-continent [continentName]="continent.buttonContinent" [imgLink]="continent.imgContinent"></app-continent>
+
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</main>
