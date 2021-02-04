@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path: 'userdata', component: UsersAccountComponent},
   {path: 'home', component: MainSiteComponent},
-  {path: 'users/adduser', component: UserFormComponent},
+  {path: 'adduser', component: UserFormComponent},
   {path: 'users', component:UserListComponent}
 
 
