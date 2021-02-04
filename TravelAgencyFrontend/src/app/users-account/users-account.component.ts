@@ -3,6 +3,8 @@ import {User} from "../user";
 import {Trip} from "../trip";
 import {TRIPS} from "../mock-trips";
 import {MatCard} from "@angular/material/card";
+import {AppComponent} from "../app.component";
+import {user1} from "../mock-users";
 
 @Component({
   selector: 'app-users-account',
@@ -11,16 +13,9 @@ import {MatCard} from "@angular/material/card";
 })
 export class UsersAccountComponent implements OnInit {
 
-  user : User = {
-    id: 1,
-    firstName: "Adam",
-    lastName: "Kowalski",
-    email : "adamk@wp.pl",
-    address: "Poznań, ul. Ratajczaka 124",
-    purchasedTrips: TRIPS,
-  }
-trips = TRIPS;
-
+  user = user1;
+  trips = TRIPS;
+  title: AppComponent;
 
   constructor() {
   }
@@ -28,7 +23,6 @@ trips = TRIPS;
   ngOnInit(): void {
 
   }
-
 
 
 }

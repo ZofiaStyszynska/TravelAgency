@@ -12,12 +12,16 @@ import {Route, RouterModule, Routes} from "@angular/router";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from "@angular/material/card";
+import { UserListComponent } from './users-account/user-list/user-list.component';
+import { UserFormComponent} from "./users-account/user-form/user-form.component";
 
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
-  {path: 'users', component: UsersAccountComponent},
-  {path: 'home', component: MainSiteComponent}
+  {path: 'userdata', component: UsersAccountComponent},
+  {path: 'home', component: MainSiteComponent},
+
+
 
 ]
 
@@ -28,7 +32,9 @@ const routes: Routes = [
     HeaderComponent,
     LoginComponent,
     MainSiteComponent,
-    UsersAccountComponent
+    UsersAccountComponent,
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
