@@ -19,6 +19,9 @@ export class UserService {
   }
 
   public save(user: User) {
-    return this.http.post<User>(this.usersUrl, user);
+    return this.http.post<User>(this.usersUrl + '/adduser', user);
+  }
+  public findUser():Observable<User>{
+    return this.http.get<User>(this.usersUrl + '/{id}' );
   }
 }

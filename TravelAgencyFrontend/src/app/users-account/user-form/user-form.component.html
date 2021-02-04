@@ -1,16 +1,18 @@
+<app-header></app-header>
+<h1 class = card-body>Rejestracja nowego użytkownika</h1>
 <div class="card my-5">
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #userForm="ngForm">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Imię</label>
         <input type="text" [(ngModel)]="user.firstName"
                class="form-control"
                id="name"
                name="name"
                placeholder="Enter your name"
-               required #name="ngModel">
+               required #firstName="ngModel">
       </div>
-      <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+      <div [hidden]="!firstName.pristine" class="alert alert-danger">Name is required</div>
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" [(ngModel)]="user.email"

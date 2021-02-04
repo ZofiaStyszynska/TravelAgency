@@ -43,7 +43,7 @@ public class UserController {
         return new ResponseEntity<List<UserDTO>>(usersWithTeSameName, HttpStatus.OK);
 
     }
-    @PostMapping
+    @PostMapping("/adduser")
     public ResponseEntity<Void> addUser(@RequestBody UserDTO userDTO) throws URISyntaxException {
         Long userId = userService.addUser(userDTO);
 

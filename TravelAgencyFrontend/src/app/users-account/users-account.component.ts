@@ -4,7 +4,8 @@ import {Trip} from "../trip";
 import {TRIPS} from "../mock-trips";
 import {MatCard} from "@angular/material/card";
 import {AppComponent} from "../app.component";
-import {user1} from "../mock-users";
+
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'app-users-account',
@@ -13,15 +14,15 @@ import {user1} from "../mock-users";
 })
 export class UsersAccountComponent implements OnInit {
 
-  user = user1;
   trips = TRIPS;
   title: AppComponent;
+  user: User
 
-  constructor() {
-  }
+  constructor(private  userService: UserService) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() { this.userService.findUser().subscribe(data => {
+    this.user = data;
+  });
   }
 
 

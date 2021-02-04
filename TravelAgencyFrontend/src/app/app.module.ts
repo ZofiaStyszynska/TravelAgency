@@ -14,12 +14,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from "@angular/material/card";
 import { UserListComponent } from './users-account/user-list/user-list.component';
 import { UserFormComponent} from "./users-account/user-form/user-form.component";
+import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "./user.service";
 
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path: 'userdata', component: UsersAccountComponent},
   {path: 'home', component: MainSiteComponent},
+  {path: 'users/adduser', component: UserFormComponent},
+  {path: 'users', component:UserListComponent}
 
 
 
@@ -43,9 +47,10 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

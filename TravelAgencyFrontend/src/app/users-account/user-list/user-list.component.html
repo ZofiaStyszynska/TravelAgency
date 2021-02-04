@@ -4,15 +4,20 @@
       <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
+        <th scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">email</th>
+        <th scope="col">Adres</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let user of users">
         <td>{{ user.id }}</td>
         <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
         <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+        <td>{{ user.address }}</td>
+
       </tr>
       </tbody>
     </table>

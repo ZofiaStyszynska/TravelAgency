@@ -75,8 +75,14 @@ public class MockData {
         List<Trip> purchasedTrips = new ArrayList<>();
         purchasedTrips.add(trip2);
         purchasedTrips.add(trip3);
+        List<Trip> purchasedTrips1 = new ArrayList<>();
+        purchasedTrips.add(trip1);
 
-        User user = new User("Adam", "Kowalski", "a.kowalski@wp.pl", address, purchasedTrips);
+
+        User user = new User("Adam", "Niezgódka", "a.niezgodka@wp.pl", address, purchasedTrips);
         userRepository.save(user);
+
+        User user1 = new User("Ambroży", "Kleks", "a.kowalski@wp.pl", address, purchasedTrips1);
+        userRepository.save(user1);
     }
 }
