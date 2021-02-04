@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 public class CountryDTO {
 
-    long id;
+    Long id;
     String countryName;
     Continent continent;
 
