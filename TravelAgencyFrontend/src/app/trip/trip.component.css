@@ -1,0 +1,27 @@
+.background__account {
+  background-color: rgb(247, 165, 43);
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding: 40px;
+}
+
+.mat__trip{
+  background-color: palegoldenrod;
+}
+
+.font__trip{
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: brown;
+}
+
+
+
+.buttons__trip {
+  display: block;
+  margin: 0 auto;
+}

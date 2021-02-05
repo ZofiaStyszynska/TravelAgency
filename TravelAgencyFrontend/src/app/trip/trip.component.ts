@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TRIPS} from "../mock-trips";
 
 @Component({
   selector: 'app-trip',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class TripComponent implements OnInit {
 
   constructor() { }
+
+
 
   ngOnInit(): void {
   }
