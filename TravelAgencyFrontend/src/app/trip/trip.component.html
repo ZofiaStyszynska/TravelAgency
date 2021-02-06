@@ -1,27 +1,27 @@
 <app-header></app-header>
 <div class="background__account buttons__trip">
 
-  <h2 class="font__trip">Wycieczka: </h2>
+  <h2 class="font__trip">Wycieczka: {{trip?.tripName}}</h2>
   <p></p>
 
   <mat-card class="mat__trip">
-   <div><span class="font__trip">Kontynent: </span> azja  </div>
+   <div><span class="font__trip">Kontynent: </span> {{trip?.continent}}  </div>
   </mat-card>
   <p></p>
   <mat-card class="mat__trip">
-   <div><span class="font__trip">Kraj: </span>  </div>
+   <div><span class="font__trip">Kraj: </span>  {{trip?.country?.countryName}}</div>
   </mat-card>
   <p></p>
   <mat-card class="mat__trip">
-    <div><span class="font__trip">Miasto: </span>  </div>
+    <div><span class="font__trip">Miasto: </span> {{trip?.city?.cityName}} </div>
   </mat-card>
   <p></p>
   <mat-card class="mat__trip">
-    <div><span class="font__trip">Data rozpoczęcia wycieczki: </span>  </div>
+    <div><span class="font__trip">Data rozpoczęcia wycieczki: </span>  {{trip?.tripStartDate}}</div>
   </mat-card>
   <p></p>
   <mat-card class="mat__trip">
-    <div><span class="font__trip">Data zakończenia wycieczki: </span>  </div>
+    <div><span class="font__trip">Data zakończenia wycieczki: </span> {{trip?.tripEndDate}} </div>
   </mat-card>
     <p></p>
 

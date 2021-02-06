@@ -13,13 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from "@angular/material/card";
 import { TripComponent } from './trip/trip.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path: 'users', component: UsersAccountComponent},
   {path: 'home', component: MainSiteComponent},
-  {path: 'trip', component: TripComponent}
+  {path: 'trip/:id', component: TripComponent}
 
 ]
 
@@ -40,6 +41,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
+    HttpClientModule
 
   ],
   providers: [],

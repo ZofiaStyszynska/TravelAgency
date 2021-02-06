@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/countries")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CountryController {
 
     private final CountryService countryService;
@@ -28,7 +29,7 @@ public class CountryController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{continent}")
+    @GetMapping("/continent/{continent}")
     public ResponseEntity<List<CountryDTO>> getCountryByContinent(@PathVariable Continent continent) {
         List<CountryDTO> countryDTOList = countryService.getCountryByContinent(continent);
 
