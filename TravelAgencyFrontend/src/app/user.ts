@@ -6,7 +6,7 @@ export interface User {
   lastName : string;
   email : string;
   address : Address
-  purchasedTrips: Trip[];
+  purchasedTripsID: number[];
 
 
 }

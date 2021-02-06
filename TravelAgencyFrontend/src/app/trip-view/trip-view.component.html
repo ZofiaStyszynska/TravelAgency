@@ -1,5 +1,12 @@
 <div class="background__trip-view">
 
+  <tbody>
+  <tr *ngFor="let trip of tripList">
+    <td>{{ trip.id }}</td>
+    <td>{{ trip.tripName }}</td>
+    </tr>
+  </tbody>
+
 </div>
 
 

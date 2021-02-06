@@ -4,6 +4,7 @@ import com.example.TravelAgency.domain.trips.Continent;
 import com.example.TravelAgency.domain.trips.city.City;
 import com.example.TravelAgency.domain.trips.city.CityDTO;
 import com.example.TravelAgency.domain.trips.country.Country;
+import com.example.TravelAgency.domain.user.UserDTO;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -71,5 +72,17 @@ public class TripService {
         final Optional<Trip> optionalTrip = tripRepository.findById(id);
         optionalTrip.ifPresent(trip -> trip.setDeleted(true));
         return optionalTrip.get().getId();
+    }
+
+    public List<TripDTO> getAllTrips() {
+        return tripRepository.findAll().stream()
+        .map(TripDTO::fromTrip)
+        .collect(Collectors.toList());
+    }
+    public List<TripDTO> getTripsByUser(UserDTO userDTO){
+        final List<Long> userTripIDs = userDTO.getTripIDs();
+        return tripRepository.findTripsByIdIn(userTripIDs).stream()
+                .map(TripDTO::fromTrip)
+                .collect(Collectors.toList());
     }
 }

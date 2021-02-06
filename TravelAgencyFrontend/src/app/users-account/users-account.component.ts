@@ -4,6 +4,7 @@ import {AppComponent} from "../app.component";
 
 import {UserService} from "../user.service";
 import {ActivatedRoute, Params} from "@angular/router";
+import {Trip} from "../trip/trip";
 
 @Component({
   selector: 'app-users-account',
@@ -12,7 +13,7 @@ import {ActivatedRoute, Params} from "@angular/router";
 })
 export class UsersAccountComponent implements OnInit {
 
-  trips = [];
+  trips:Trip[];
   title: AppComponent;
   user: User
 
@@ -25,6 +26,7 @@ export class UsersAccountComponent implements OnInit {
         this.user = user;
       })
     });
+
 
 
   }

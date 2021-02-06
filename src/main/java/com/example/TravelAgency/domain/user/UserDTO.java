@@ -1,5 +1,6 @@
 package com.example.TravelAgency.domain.user;
 
+import com.example.TravelAgency.domain.base.BaseEntity;
 import com.example.TravelAgency.domain.trips.trip.TripDTO;
 import lombok.Value;
 
@@ -16,6 +17,7 @@ public class UserDTO {
     String lastName;
     String email;
     Address address;
+    List<Long> tripIDs;
 
     public static UserDTO fromUser(User user) {
         return new UserDTO(
@@ -24,7 +26,9 @@ public class UserDTO {
                 user.getLastName(),
                 user.getEmail(),
                 new Address(user.getAddress().getCityName(),user.getAddress().getStreetName(),user.getAddress().getHouseNumber(),
-                        user.getAddress().getPostalCode())
+                        user.getAddress().getPostalCode()),
+                user.getPurchasedTrips().stream().map(BaseEntity::getId)
+                .collect(Collectors.toList())
 
         );
     }

@@ -1,5 +1,6 @@
 package com.example.TravelAgency.domain.user;
 
+import com.example.TravelAgency.domain.trips.trip.TripDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,10 +22,11 @@ public class UserServiceTest {
     private UserService userService;
 
     UserDTO user1DTO = new UserDTO(null,"Adam","Kowalski","adamk@wp.pl",
-                            new Address("Poznań","Ratajczaka","15a","61-015"));
+                            new Address("Poznań","Ratajczaka","15a","61-015"),
+            new ArrayList<>());
 
     UserDTO user2DTO = new UserDTO(null,"Michał","Nowak","michaln@wp.pl",
-            new Address("Poznań","Garbary","146","61-018"));
+            new Address("Poznań","Garbary","146","61-018"),new ArrayList<>());
 
     @Test
     void should_add_users_to_db(){
