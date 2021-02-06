@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping ("/cities")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CityController {
 
     private final CityService cityService;
@@ -31,7 +32,7 @@ public class CityController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{country}")
+    @GetMapping("/country/{country}")
     public ResponseEntity<List<CityDTO>> getCityByCountry(@PathVariable Country country) {
         List<CityDTO> cityDTOList = cityService.getCityByCountry(country);
         return new ResponseEntity<List<CityDTO>>(cityDTOList, HttpStatus.OK);

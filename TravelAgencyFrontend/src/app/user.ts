@@ -1,4 +1,4 @@
-import {Trip} from "./trip";
+import {Trip} from "./trip/trip";
 
 export interface User {
   id: number;

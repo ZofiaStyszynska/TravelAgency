@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../user";
-import {Trip} from "../trip";
-import {TRIPS} from "../mock-trips";
-import {MatCard} from "@angular/material/card";
 import {AppComponent} from "../app.component";
 
 import {UserService} from "../user.service";
@@ -15,7 +12,7 @@ import {ActivatedRoute, Params} from "@angular/router";
 })
 export class UsersAccountComponent implements OnInit {
 
-  trips = TRIPS;
+  trips = [];
   title: AppComponent;
   user: User
 
@@ -31,6 +28,7 @@ export class UsersAccountComponent implements OnInit {
 
 
   }
+
 
 
 }

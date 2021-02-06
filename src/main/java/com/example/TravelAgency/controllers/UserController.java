@@ -36,7 +36,7 @@ public class UserController {
 
 
 
-    @GetMapping("/{lastName}")
+    @GetMapping("/lastName/{lastName}")
     public ResponseEntity<List<UserDTO>> getUsersByLastName(@PathVariable String lastName) {
         List<UserDTO> usersWithTeSameName = userService.getUsersByLastName(lastName);
 

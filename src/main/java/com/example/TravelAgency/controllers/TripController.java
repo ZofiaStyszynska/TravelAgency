@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/trips")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TripController {
 
     private final TripService tripService;
@@ -30,24 +31,24 @@ public class TripController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{tripName}")
+    @GetMapping("/name/{tripName}")
     public ResponseEntity<List<TripDTO>> getTripByName (@PathVariable String tripName) {
         List<TripDTO> tripDTOList = tripService.getTripByName(tripName);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
-    @GetMapping("/{continent}")
+    @GetMapping("/continent/{continent}")
     public ResponseEntity<List<TripDTO>> getTripByContinent (@PathVariable Continent continent) {
         List<TripDTO> tripDTOList = tripService.getTripByContinent(continent);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
 
-    @GetMapping("/{country}")
+    @GetMapping("/country/{country}")
     public ResponseEntity<List<TripDTO>> getTripByCountry (@PathVariable Country country) {
             List<TripDTO> tripDTOList = tripService.getTripByCountry(country);
             return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
 
-    @GetMapping("/{city}")
+    @GetMapping("/city/{city}")
     public ResponseEntity<List<TripDTO>> getTripByCity (@PathVariable City city) {
         List<TripDTO> tripDTOList = tripService.getTripByCity(city);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
