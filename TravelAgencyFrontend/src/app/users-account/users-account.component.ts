@@ -3,6 +3,10 @@ import {User} from "../user";
 import {Trip} from "../trip";
 import {TRIPS} from "../mock-trips";
 import {MatCard} from "@angular/material/card";
+import {AppComponent} from "../app.component";
+
+import {UserService} from "../user.service";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-users-account',
@@ -11,24 +15,22 @@ import {MatCard} from "@angular/material/card";
 })
 export class UsersAccountComponent implements OnInit {
 
-  user : User = {
-    id: 1,
-    firstName: "Adam",
-    lastName: "Kowalski",
-    email : "adamk@wp.pl",
-    address: "Poznań, ul. Ratajczaka 124",
-    purchasedTrips: TRIPS,
-  }
-trips = TRIPS;
+  trips = TRIPS;
+  title: AppComponent;
+  user: User
 
-
-  constructor() {
+  constructor(private  userService: UserService, private router: ActivatedRoute) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.router.params.subscribe((params: Params) => {
+      this.userService.findUser(params['id']).subscribe(user => {
+        this.user = user;
+      })
+    });
+
 
   }
-
 
 
 }

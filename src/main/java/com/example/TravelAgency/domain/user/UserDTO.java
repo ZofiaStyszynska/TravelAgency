@@ -23,7 +23,8 @@ public class UserDTO {
                 user.getFirstName(),
                 user.getLastName(),
                 user.getEmail(),
-                user.getAddress()
+                new Address(user.getAddress().getCityName(),user.getAddress().getStreetName(),user.getAddress().getHouseNumber(),
+                        user.getAddress().getPostalCode())
 
         );
     }

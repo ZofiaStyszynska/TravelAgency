@@ -1,0 +1,15 @@
+.card-body{
+  background-color: goldenrod;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  padding: 40px;
+  color: brown;
+
+;
+
+}
+.form-group, .form-control{
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+}

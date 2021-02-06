@@ -11,7 +11,8 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@CrossOrigin(origins = "http://localhost:4200")
+//@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -21,12 +22,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("users")
     public List<UserDTO> getAllUsers(){
         return userService.getAllUsers();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("userdata/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         return userService.getUserByID(id)
                 .map(ResponseEntity::ok)
@@ -42,7 +43,7 @@ public class UserController {
         return new ResponseEntity<List<UserDTO>>(usersWithTeSameName, HttpStatus.OK);
 
     }
-    @PostMapping
+    @PostMapping("/adduser")
     public ResponseEntity<Void> addUser(@RequestBody UserDTO userDTO) throws URISyntaxException {
         Long userId = userService.addUser(userDTO);
 
