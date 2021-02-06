@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/users")
+//@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -22,12 +22,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("users")
     public List<UserDTO> getAllUsers(){
         return userService.getAllUsers();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("userdata/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         return userService.getUserByID(id)
                 .map(ResponseEntity::ok)

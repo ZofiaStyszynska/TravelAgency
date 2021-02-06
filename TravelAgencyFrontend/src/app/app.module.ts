@@ -20,7 +20,7 @@ import {UserService} from "./user.service";
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
-  {path: 'userdata', component: UsersAccountComponent},
+  {path: 'userdata/:id', component: UsersAccountComponent},
   {path: 'home', component: MainSiteComponent},
   {path: 'adduser', component: UserFormComponent},
   {path: 'users', component:UserListComponent}

@@ -6,6 +6,7 @@ import {MatCard} from "@angular/material/card";
 import {AppComponent} from "../app.component";
 
 import {UserService} from "../user.service";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-users-account',
@@ -18,11 +19,17 @@ export class UsersAccountComponent implements OnInit {
   title: AppComponent;
   user: User
 
-  constructor(private  userService: UserService) { }
+  constructor(private  userService: UserService, private router: ActivatedRoute) {
+  }
 
-  ngOnInit() { this.userService.findUser().subscribe(data => {
-    this.user = data;
-  });
+  ngOnInit() {
+    this.router.params.subscribe((params: Params) => {
+      this.userService.findUser(params['id']).subscribe(user => {
+        this.user = user;
+      })
+    });
+
+
   }
 
 
