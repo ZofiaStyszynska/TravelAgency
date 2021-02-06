@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Value
 public class TripDTO {
 
-    long id;
+    Long id;
     String tripName;
     Continent continent;
     Country country;
