@@ -4,7 +4,10 @@ Email<input type="email" name="emailField">
 
 Hasło<input type="password" name="passwordField">
 
-<button name="loginButton" formtarger="_self">Zaloguj</button>
+<!--<button name="loginButton" formtarger="_self">Zaloguj</button>-->
+  <button [routerLink]="['../userdata', 1]">Zaloguj</button>
+
 <button name="registerButton" formtarger="_self">Zarejestruj</button>
+<!--  <button [routerLink]="['../users', 2]">Zarejestruj</button>-->
 
 </div>
