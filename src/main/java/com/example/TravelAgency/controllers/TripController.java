@@ -61,11 +61,7 @@ public class TripController {
         List<TripDTO> tripDTOList = tripService.getTripByCity(city);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
-    @GetMapping("/usertrips/{user}")
-    public ResponseEntity<List<TripDTO>> getTripsByUser(@PathVariable UserDTO user){
-        List<TripDTO> tripDTOList = tripService.getTripsByUser(user);
-        return new ResponseEntity<List<TripDTO>>(tripDTOList,HttpStatus.OK);
-    }
+
 
     @PostMapping
     public ResponseEntity<Void> addTrip (@RequestBody TripDTO tripDTO) throws URISyntaxException {

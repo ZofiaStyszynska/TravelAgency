@@ -1,11 +1,12 @@
 <div class="background__trip-view">
 
-  <tbody>
-  <tr *ngFor="let trip of tripList">
-    <td>{{ trip.id }}</td>
-    <td>{{ trip.tripName }}</td>
-    </tr>
-  </tbody>
+
+  <ul class="trips">
+    <li *ngFor="let trip of tripList">
+      <span class="badge">{{trip.id}}</span> {{trip.tripName}}
+    </li>
+  </ul>
+
 
 </div>
 

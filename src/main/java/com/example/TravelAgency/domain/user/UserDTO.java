@@ -17,7 +17,7 @@ public class UserDTO {
     String lastName;
     String email;
     Address address;
-    List<Long> tripIDs;
+    List<TripDTO> purchasedTrips;
 
     public static UserDTO fromUser(User user) {
         return new UserDTO(
@@ -27,7 +27,7 @@ public class UserDTO {
                 user.getEmail(),
                 new Address(user.getAddress().getCityName(),user.getAddress().getStreetName(),user.getAddress().getHouseNumber(),
                         user.getAddress().getPostalCode()),
-                user.getPurchasedTrips().stream().map(BaseEntity::getId)
+                user.getPurchasedTrips().stream().map(TripDTO::fromTrip)
                 .collect(Collectors.toList())
 
         );

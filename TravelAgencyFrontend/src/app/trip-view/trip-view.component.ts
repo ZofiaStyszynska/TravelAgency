@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Trip} from "../trip/trip";
-import {TripListView} from "./trip-list-view";
+
 import {ActivatedRoute, Params} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -14,17 +14,16 @@ import {TripService} from "../trip.service";
   styleUrls: ['./trip-view.component.css']
 })
 export class TripViewComponent implements OnInit {
-
+  @Input()
   tripList: Trip[]
   user:User
 
 
-  constructor(private tripService:TripService) {
+
+  constructor(private tripService:TripService,private router:ActivatedRoute) {
   }
 
   ngOnInit():void {
-    this.tripService.findAll().subscribe(data=> {
-    this.tripList =data;
-  })}}
+    }}
 
 

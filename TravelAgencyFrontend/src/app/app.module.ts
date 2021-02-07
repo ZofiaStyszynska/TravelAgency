@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'adduser', component: UserFormComponent},
   {path: 'users', component:UserListComponent},
   {path: 'trip/:id', component: TripComponent},
-  {path: 'trips',component:TripViewComponent}
+  {path: 'trips/usertrips/:id',component:TripViewComponent}
 
 
 

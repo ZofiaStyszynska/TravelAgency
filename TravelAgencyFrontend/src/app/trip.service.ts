@@ -21,7 +21,7 @@ export class TripService {
     return this.http.get<Trip[]>(this.tripUrl);
   }
 
-  public findTripsByUser(user:User): Observable<Trip[]> {
-    return this.http.get<Trip[]>(this.tripUrl + user);
+  public findTripsByUser(id:number): Observable<Trip[]> {
+    return this.http.get<Trip[]>(this.tripUrl +'/usertrips/'+ id);
   }
 }

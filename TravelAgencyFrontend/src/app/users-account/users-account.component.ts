@@ -13,8 +13,8 @@ import {Trip} from "../trip/trip";
 })
 export class UsersAccountComponent implements OnInit {
 
-  trips:Trip[];
-  title: AppComponent;
+
+
   user: User
 
   constructor(private  userService: UserService, private router: ActivatedRoute) {
