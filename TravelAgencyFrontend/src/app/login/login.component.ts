@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
@@ -8,13 +8,14 @@ import {ActivatedRoute, Params} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private login : string;
+  private login: string;
 
-  constructor(private router : ActivatedRoute) { }
+  constructor(private router: ActivatedRoute) {
+  }
 
-  ngOnInit(){
+  ngOnInit() {
 
-    this.router.params.subscribe((params:Params) => {
+    this.router.params.subscribe((params: Params) => {
       this.login = params['users'];
     })
   }

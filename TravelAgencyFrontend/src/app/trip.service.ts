@@ -21,7 +21,7 @@ export class TripService {
     return this.http.get<Trip[]>(this.tripUrl);
   }
 
- public findTripsByContinent(continent:string): Observable<Trip[]>{
-    return this.http.get<Trip[]>(this.tripUrl+'continent/'+ continent.toUpperCase())
- }
+  public findTripsByContinent(continent: string): Observable<Trip[]> {
+    return this.http.get<Trip[]>(this.tripUrl + 'continent/' + continent.toUpperCase())
+  }
 }

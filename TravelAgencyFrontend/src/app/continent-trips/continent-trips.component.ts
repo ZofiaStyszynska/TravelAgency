@@ -18,7 +18,9 @@ export class ContinentTripsComponent implements OnInit {
   ngOnInit(): void {
     this.router.params.subscribe((params: Params) => {
       this.tripService.findTripsByContinent(params['continent'])
-        .subscribe((data:Trip[])=>{this.trips=data})
+        .subscribe((data: Trip[]) => {
+          this.trips = data
+        })
     })
   }
 

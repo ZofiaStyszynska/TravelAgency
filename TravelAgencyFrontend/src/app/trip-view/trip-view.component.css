@@ -1,10 +1,11 @@
-.background__trip-view{
+.background__trip-view {
   background-color: rgb(247, 165, 43);
   margin-bottom: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
 }
+
 .trips {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -13,6 +14,7 @@
   color: brown;
   font-family: Arial, sans-serif;
 }
+
 .trips li {
   cursor: pointer;
   position: relative;
@@ -23,19 +25,23 @@
   height: 1.6em;
   border-radius: 4px;
 }
+
 .trips li:hover {
   color: #607D8B;
   background-color: chocolate;
   left: .1em;
 }
+
 .trips li.selected {
   background-color: darkorange;
   color: white;
 }
+
 .trips li.selected:hover {
   background-color: #BBD8DC;
   color: white;
 }
+
 .trips .badge {
   display: inline-block;
   font-size: small;

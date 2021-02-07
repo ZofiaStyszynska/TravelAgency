@@ -9,9 +9,9 @@ import {Trip} from "../trip/trip";
 export class ContinentComponent implements OnInit {
 
   @Input()
-public continentName : string;
+  public continentName: string;
   @Input()
-public imgLink : string;
+  public imgLink: string;
   @Input()
   public type: string;
 
