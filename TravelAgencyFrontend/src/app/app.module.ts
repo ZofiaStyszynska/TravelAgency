@@ -17,7 +17,8 @@ import { UserFormComponent} from "./users-account/user-form/user-form.component"
 import {HttpClientModule} from "@angular/common/http";
 import {UserService} from "./user.service";
 import { TripComponent } from './trip/trip.component';
-
+import {TripViewComponent} from "./trip-view/trip-view.component";
+import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,9 @@ const routes: Routes = [
   {path: 'home', component: MainSiteComponent},
   {path: 'adduser', component: UserFormComponent},
   {path: 'users', component:UserListComponent},
-  {path: 'trip/:id', component: TripComponent}
+  {path: 'trip/:id', component: TripComponent},
+  {path: 'trips/usertrips/:id',component:TripViewComponent},
+  {path: 'continent/:continent', component:ContinentTripsComponent}
 
 
 
@@ -42,7 +45,9 @@ const routes: Routes = [
     UsersAccountComponent,
     UserListComponent,
     UserFormComponent,
-    TripComponent
+    TripComponent,
+    TripViewComponent,
+    ContinentTripsComponent
   ],
   imports: [
     BrowserModule,

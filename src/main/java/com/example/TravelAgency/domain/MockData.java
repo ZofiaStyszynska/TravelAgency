@@ -76,7 +76,7 @@ public class MockData {
         purchasedTrips.add(trip2);
         purchasedTrips.add(trip3);
         List<Trip> purchasedTrips1 = new ArrayList<>();
-        purchasedTrips.add(trip1);
+        purchasedTrips1.add(trip1);
 
 
         User user = new User("Adam", "Niezgódka", "a.niezgodka@wp.pl", address, purchasedTrips);

@@ -1,5 +1,13 @@
 <div class="background__trip-view">
 
+
+  <ul class="trips">
+    <li *ngFor="let trip of tripList">
+      <span class="badge">{{trip.id}}</span> {{trip.tripName}}
+    </li>
+  </ul>
+
+
 </div>
 
 

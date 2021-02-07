@@ -19,5 +19,7 @@ public interface TripRepository extends JpaRepository<Trip, Long> {
     List<Trip> findByCity (City city);
     List<Trip> findByTripStartDate (LocalDate tripStartDate);
     List<Trip> findByTripEndDate (LocalDate country);
+    List<Trip> findTripsByIdIn (List<Long> tripsIDs);
+
 
 }

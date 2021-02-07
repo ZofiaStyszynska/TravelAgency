@@ -3,8 +3,11 @@ package com.example.TravelAgency.controllers;
 import com.example.TravelAgency.domain.trips.Continent;
 import com.example.TravelAgency.domain.trips.city.City;
 import com.example.TravelAgency.domain.trips.country.Country;
+import com.example.TravelAgency.domain.trips.trip.Trip;
 import com.example.TravelAgency.domain.trips.trip.TripDTO;
 import com.example.TravelAgency.domain.trips.trip.TripService;
+import com.example.TravelAgency.domain.user.User;
+import com.example.TravelAgency.domain.user.UserDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +25,11 @@ public class TripController {
 
     public TripController(TripService tripService) {
         this.tripService = tripService;
+    }
+
+    @GetMapping
+    public List<TripDTO> getAllTrips(){
+        return tripService.getAllTrips();
     }
 
     @GetMapping("/{id}")
@@ -53,6 +61,7 @@ public class TripController {
         List<TripDTO> tripDTOList = tripService.getTripByCity(city);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
+
 
     @PostMapping
     public ResponseEntity<Void> addTrip (@RequestBody TripDTO tripDTO) throws URISyntaxException {
