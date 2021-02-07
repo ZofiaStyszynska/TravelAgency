@@ -37,38 +37,42 @@ public class MockData {
 
     @PostConstruct
     @Transactional
-    public void generateMockData () {
+    public void generateMockData() {
 
         Country country1 = new Country("United Kingdom", Continent.EUROPE);
         Country country2 = new Country("Japan", Continent.ASIA);
         Country country3 = new Country("United States", Continent.NORTH_AMERICA);
+        Country country4 = new Country("Tanzania", Continent.AFRICA);
         countryRepository.save(country1);
         countryRepository.save(country2);
         countryRepository.save(country3);
-
+        countryRepository.save(country4);
 
         City city1 = new City("London", country1);
         City city2 = new City("Tokyo", country2);
         City city3 = new City("New York", country3);
+        City city4 = new City("Zanzibar", country3);
         cityRepository.save(city1);
         cityRepository.save(city2);
         cityRepository.save(city3);
+        cityRepository.save(city4);
 
 
         LocalDate trip1Start = LocalDate.of(2021, 7, 1);
-        LocalDate trip1End = LocalDate.of(2021, 7,10);
+        LocalDate trip1End = LocalDate.of(2021, 7, 10);
         LocalDate trip2Start = LocalDate.of(2021, 5, 7);
-        LocalDate trip2End = LocalDate.of(2021, 5,21);
+        LocalDate trip2End = LocalDate.of(2021, 5, 21);
         LocalDate trip3Start = LocalDate.of(2021, 8, 1);
-        LocalDate trip3End = LocalDate.of(2021, 8,21);
+        LocalDate trip3End = LocalDate.of(2021, 8, 21);
 
 
-       Trip trip1 = new Trip("Trip 1", Continent.EUROPE, country1, city1, trip1Start, trip1End) ;
-       Trip trip2 = new Trip("Trip 2", Continent.ASIA, country2, city2, trip2Start, trip2End);
-       Trip trip3 = new Trip("Trip 3", Continent.NORTH_AMERICA, country3, city3, trip3Start, trip3End);
-       tripRepository.save(trip1);
-       tripRepository.save(trip2);
-       tripRepository.save(trip3);
+        Trip trip1 = new Trip("Tea Time", Continent.EUROPE, country1, city1, trip1Start, trip1End);
+        Trip trip2 = new Trip("Kraj Kwitnącej Wiśni", Continent.ASIA, country2, city2, trip2Start, trip2End);
+        Trip trip3 = new Trip("American Dream", Continent.NORTH_AMERICA, country3, city3, trip3Start, trip3End);
+        Trip trip4 = new Trip("Feel the rythm", Continent.AFRICA,country4,city4,trip3Start, trip3End );
+        tripRepository.save(trip1);
+        tripRepository.save(trip2);
+        tripRepository.save(trip3);
 
 
         Address address = new Address("Poznań", "Długa", "2", "61-858");
