@@ -2,7 +2,7 @@
 
   <td>
     <img [src]="imgLink" width= 375px, height=420px>
-    <button name="ContinentButton" formtarget="_self">
+    <button name="ContinentButton" formtarget="_self" [routerLink]="['/continent', type] ">
       {{continentName}}
     </button>
 
