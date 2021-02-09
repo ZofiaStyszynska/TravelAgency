@@ -1,8 +1,8 @@
 <div class="background__table buttons__continents table__center">
 
   <td>
-    <img [src]="imgLink" width= 375px, height=420px>
-    <button name="ContinentButton" formtarget="_self">
+    <img [src]="imgLink" width=375px, height=420px>
+    <button name="ContinentButton" formtarget="_self" [routerLink]="['/continent', type] ">
       {{continentName}}
     </button>
 
