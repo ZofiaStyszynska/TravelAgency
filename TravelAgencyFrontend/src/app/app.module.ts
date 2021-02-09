@@ -17,7 +17,7 @@ import {UserFormComponent} from "./users-account/user-form/user-form.component";
 import {HttpClientModule} from "@angular/common/http";
 import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
-import {ContinentTripsComponent} from './continent-trips/continent-trips.component';
+import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
 
 
 const routes: Routes = [
@@ -60,5 +60,4 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
