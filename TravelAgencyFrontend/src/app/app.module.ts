@@ -18,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
 import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
+import {UserService} from "./user.service";
 
 
 const routes: Routes = [
