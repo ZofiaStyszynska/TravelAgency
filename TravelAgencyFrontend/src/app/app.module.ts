@@ -18,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
 import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
+import {MatInputModule} from '@angular/material/input';
 import {UserService} from "./user.service";
 
 
@@ -46,7 +47,8 @@ const routes: Routes = [
     UserFormComponent,
     TripComponent,
     TripViewComponent,
-    ContinentTripsComponent
+    ContinentTripsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
 
   ],
   providers: [],
