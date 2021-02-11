@@ -8,8 +8,7 @@ import {LoginComponent} from './login/login.component';
 import {MainSiteComponent} from './main-site/main-site.component';
 import {UsersAccountComponent} from './users-account/users-account.component';
 import {FormsModule} from "@angular/forms";
-import {Route, RouterModule, Routes} from "@angular/router";
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from "@angular/router";
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from "@angular/material/card";
 import {UserListComponent} from './users-account/user-list/user-list.component';
@@ -18,7 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
 import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
-import {UserService} from "./user.service";
+import {MatInputModule} from '@angular/material/input';
 
 
 const routes: Routes = [
@@ -46,19 +45,20 @@ const routes: Routes = [
     UserFormComponent,
     TripComponent,
     TripViewComponent,
-    ContinentTripsComponent
+    ContinentTripsComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    HttpClientModule
-
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

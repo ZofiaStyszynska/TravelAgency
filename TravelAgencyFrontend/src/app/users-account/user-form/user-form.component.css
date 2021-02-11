@@ -4,6 +4,7 @@
   font-weight: bold;
   padding: 40px;
   color: brown;
+  margin: 0;
 
 ;
 
@@ -12,4 +13,19 @@
   margin-bottom: 5px;
   margin-top: 5px;
 
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: brown;
+}
+.mat-label {
+  font-family: Arial, sans-serif;
+  color: brown;
 }

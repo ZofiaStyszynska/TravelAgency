@@ -1,12 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import {User} from "../../user";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../../user.service";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  styleUrls: ['./user-form.component.css'],
+  animations: [trigger,
+    state,
+    style,
+    animate,
+    transition,
+
+  ]
 })
 export class UserFormComponent implements OnInit {
 
