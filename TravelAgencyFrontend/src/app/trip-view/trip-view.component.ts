@@ -16,14 +16,14 @@ import {TripService} from "../trip.service";
 export class TripViewComponent implements OnInit {
   @Input()
   tripList: Trip[]
-  user:User
+  user: User
 
 
-
-  constructor(private tripService:TripService,private router:ActivatedRoute) {
+  constructor(private tripService: TripService, private router: ActivatedRoute) {
   }
 
-  ngOnInit():void {
-    }}
+  ngOnInit(): void {
+  }
+}
 
 

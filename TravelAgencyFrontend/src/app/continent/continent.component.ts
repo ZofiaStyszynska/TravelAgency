@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Trip} from "../trip/trip";
 
 @Component({
   selector: 'app-continent',
@@ -8,18 +9,18 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ContinentComponent implements OnInit {
 
   @Input()
-public continentName : string;
+  public continentName: string;
   @Input()
-public imgLink : string;
+  public imgLink: string;
+  @Input()
+  public type: string;
 
 
   constructor() {
 
-
-
-
   }
 
   ngOnInit(): void {
+
   }
 }

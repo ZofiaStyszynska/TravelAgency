@@ -1,16 +1,16 @@
 
 <app-header></app-header>
 <div class="background__account">
-  <h2 class="font__user">Konto użytkownika {{user.firstName + " " + user.lastName}}</h2>
+  <h2 class="font__user">Konto użytkownika {{user?.firstName + " " + user?.lastName}}</h2>
   <mat-card class="mat">
-    <div><span class="font__user">id: </span>{{user.id}}</div>
-    <div><span class="font__user">Miejsce zamieszkania: </span>{{user.address.cityName}}</div>
-    <div><span class="font__user">Adres email: </span>{{user.email}}</div>
+    <div><span class="font__user">id: </span>{{user?.id}}</div>
+    <div><span class="font__user">Miejsce zamieszkania: </span>{{user?.address.cityName}}</div>
+    <div><span class="font__user">Adres email: </span>{{user?.email}}</div>
   </mat-card>
   <p></p>
   <h3 class="font__user">Edycja danych </h3>
   <mat-card class="mat">
-  <div>
+  <div *ngIf="user">
     <label><p class="font__user">Imię:
       <input [(ngModel)]="user.firstName" placeholder="firstName"/></p>
     </label>
@@ -25,7 +25,7 @@
   </mat-card>
   <div>
   <h3 class="font__user">Wykupione wycieczki</h3>
-  <app-trip-view [tripList]="user.purchasedTrips"></app-trip-view>
+  <app-trip-view [tripList]="user?.purchasedTrips"></app-trip-view>
   </div>
   <p>
   </p>
