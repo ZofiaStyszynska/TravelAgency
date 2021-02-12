@@ -15,7 +15,8 @@
         <td *ngFor="let continent of continents">
 
           <app-continent [continentName]="continent.buttonContinent" [imgLink]="continent.imgContinent"
-                         [type]="continent.type"></app-continent>
+                         [type]="continent.type" [routerLink]="continent.routerLink"></app-continent>
+
 
         </td>
 
