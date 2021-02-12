@@ -5,6 +5,7 @@ import com.example.TravelAgency.domain.trips.city.City;
 import com.example.TravelAgency.domain.trips.country.Country;
 import lombok.Value;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Value
@@ -17,6 +18,7 @@ public class TripDTO {
     City city;
     LocalDate tripStartDate;
     LocalDate tripEndDate;
+    BigDecimal tripPrice;
 
     public static TripDTO fromTrip (Trip trip){
         return new TripDTO(
@@ -26,7 +28,8 @@ public class TripDTO {
                 trip.getCountry(),
                 trip.getCity(),
                 trip.getTripStartDate(),
-                trip.getTripEndDate()
+                trip.getTripEndDate(),
+                trip.getTripPrice()
         );
     }
 }

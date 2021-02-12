@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -59,6 +60,12 @@ public class TripController {
     @GetMapping("/city/{city}")
     public ResponseEntity<List<TripDTO>> getTripByCity (@PathVariable City city) {
         List<TripDTO> tripDTOList = tripService.getTripByCity(city);
+        return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
+    }
+
+    @GetMapping("/price/{tripPrice}")
+    public ResponseEntity<List<TripDTO>> getTripByPrice (@PathVariable BigDecimal tripPrice) {
+        List<TripDTO> tripDTOList = tripService.getTripByPrice(tripPrice);
         return new ResponseEntity<List<TripDTO>>(tripDTOList, HttpStatus.OK);
     }
 

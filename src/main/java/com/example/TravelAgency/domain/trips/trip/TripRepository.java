@@ -7,6 +7,7 @@ import com.example.TravelAgency.domain.trips.trip.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface TripRepository extends JpaRepository<Trip, Long> {
     List<Trip> findByCity (City city);
     List<Trip> findByTripStartDate (LocalDate tripStartDate);
     List<Trip> findByTripEndDate (LocalDate country);
-    List<Trip> findTripsByIdIn (List<Long> tripsIDs);
+    List<Trip> findTripByTripPrice (BigDecimal tripPrice);
 
 
 }

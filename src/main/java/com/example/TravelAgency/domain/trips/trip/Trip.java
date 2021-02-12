@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 
@@ -28,4 +29,5 @@ public class Trip extends BaseEntity {
     private City city;
     private LocalDate tripStartDate;
     private LocalDate tripEndDate;
+    private BigDecimal tripPrice;
 }

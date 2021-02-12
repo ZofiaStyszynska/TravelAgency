@@ -9,4 +9,5 @@ export interface Trip {
   city: City;
   tripStartDate: Date;
   tripEndDate: Date;
+  tripPrice: number;
 }

@@ -7,6 +7,7 @@ import com.example.TravelAgency.domain.user.UserDTO;
 import com.example.TravelAgency.domain.user.UserService;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,10 +65,16 @@ public class TripService {
                 .collect(Collectors.toList());
     }
 
+    public List<TripDTO> getTripByPrice (BigDecimal tripPrice) {
+        return tripRepository.findTripByTripPrice(tripPrice).stream()
+                .map(TripDTO::fromTrip)
+                .collect(Collectors.toList());
+    }
+
     public Long addTrip(TripDTO tripDTO) {
         final Trip trip = tripRepository
                 .save(new Trip(tripDTO.getTripName(), tripDTO.getContinent(),
-                        tripDTO.getCountry(), tripDTO.getCity(), tripDTO.getTripStartDate(), tripDTO.getTripEndDate()));
+                        tripDTO.getCountry(), tripDTO.getCity(), tripDTO.getTripStartDate(), tripDTO.getTripEndDate(), tripDTO.getTripPrice()));
         return trip.getId();
     }
 
