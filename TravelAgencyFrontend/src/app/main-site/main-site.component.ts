@@ -16,27 +16,32 @@ export class MainSiteComponent implements OnInit {
       {
         imgContinent: "https://www.toptravel.pl/wp-content/uploads/Afryka/Afryka-wycieczki.png",
         buttonContinent: "Afryka",
-        type: 'AFRICA'
+        type: 'AFRICA',
+        routerLink: ['../trip', 4]
       },
       {
         imgContinent: "https://www.toptravel.pl/wp-content/uploads/Ameryka-Srodkowa-wycieczki.png",
         buttonContinent: "Ameryka północna",
-        type: 'NORTH_AMERICA'
+        type: 'NORTH_AMERICA',
+        routerLink: ['../trip', 3]
       },
       {
         imgContinent: "https://www.toptravel.pl/wp-content/uploads/Australia/Australia-wycieczki.png",
         buttonContinent: "Australia",
-        type: 'AUSTRALIA'
+        type: 'AUSTRALIA',
+        routerLink: ['../trip', 5]
       },
       {
         imgContinent: "https://www.toptravel.pl/wp-content/uploads/Azja/Azja-wycieczki.png",
         buttonContinent: "Azja",
-        type: "ASIA"
+        type: "ASIA",
+        routerLink: ['../trip', 2]
       },
       {
         imgContinent: "https://www.toptravel.pl/wp-content/uploads/Europa/Europa-wycieczki.png",
         buttonContinent: "Europa",
-        type: 'EUROPE'
+        type: 'EUROPE',
+        routerLink: ['../trip', 1]
       }
 
     ];
