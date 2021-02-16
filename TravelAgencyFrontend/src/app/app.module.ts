@@ -19,6 +19,7 @@ import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
 import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
 import {UserService} from "./user.service";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
@@ -55,7 +56,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
 
   ],
   providers: [],
