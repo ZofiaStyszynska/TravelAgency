@@ -39,7 +39,8 @@ public class UserService {
                 userDTO.getFirstName(),
                 userDTO.getLastName(),
                 userDTO.getEmail(),
-                userDTO.getAddress(),new ArrayList<>()));
+                new Address(userDTO.getAddress().getStreetName(),userDTO.getAddress().getHouseNumber(),
+                        userDTO.getAddress().getCityName(),userDTO.getAddress().getPostalCode()),new ArrayList<>()));
         return user.getId();
     }
 

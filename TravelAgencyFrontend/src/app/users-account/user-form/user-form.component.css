@@ -1,9 +1,16 @@
+
+.container{
+  background-color: palegoldenrod;
+
+}
+
 .card-body{
   background-color: goldenrod;
   font-family: Arial,sans-serif;
   font-weight: bold;
   padding: 40px;
   color: brown;
+  margin: 0;
 
 ;
 

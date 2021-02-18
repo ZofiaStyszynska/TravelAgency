@@ -1,40 +1,108 @@
 <app-header></app-header>
-<h1 class = card-body>Rejestracja nowego użytkownika</h1>
-<div class="card my-5">
-  <div class="card-body">
-    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
-      <div class="form-group">
-        <label for="firstName">Imię</label>
-        <input type="text" [(ngModel)]="user.firstName"
-               class="form-control"
-               id="firstName"
-               name="name"
-               placeholder="podaj imię"
-               required #firstName="ngModel">
-      </div>
-      <div class="form-group">
-        <label for="name">Nazwisko</label>
-        <input type="text" [(ngModel)]="user.lastName"
-               class="form-control"
-               id="name"
-               name="name"
-               placeholder="podaj nazwisko"
-               required #firstName="ngModel">
-      </div>
-      <div [hidden]="!firstName.pristine" class="alert alert-danger">Name is required</div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" [(ngModel)]="user.email"
-               class="form-control"
-               id="email"
-               name="email"
-               placeholder="Enter your email address"
-               required #email="ngModel">
-        <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
-      </div>
-      <button type="submit" [disabled]="!userForm.form.valid"
-              class="btn btn-info">Submit</button>
-    </form>
-  </div>
+$enable-grid-classes
+<div class="container">
+  <div class="py-5 text-center">
+    <h1 class=card-body>Rejestracja nowego użytkownika</h1>
+    <div class="card my-5">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm" novalidate>
+          <div class="form-group">
+            <label for="firstName">Imię </label>
+            <input type="text" [(ngModel)]="firstName"
+                   class="form-control"
+                   id="firstName"
+                   name="name"
+                   placeholder="Proszę podać imię"
+                   required #firstName="ngModel">
+          </div>
+          <div class="form-group">
+            <label for="name">Nazwisko </label>
+            <input type="text" [(ngModel)]="lastName"
+                   class="form-control"
+                   id="name"
+                   name="name"
+                   placeholder="Proszę podać nazwisko"
+                   required #lastName="ngModel">
+          </div>
 
+          <div class="form-group">
+            <label for="email">Email </label>
+            <input type="text" [(ngModel)]="email"
+                   class="form-control"
+                   id="email"
+                   name="email"
+                   placeholder="Proszę podać adres email"
+                   required #email="ngModel">
+
+          </div>
+
+
+            <div class="row" class="form-group">
+              <div class="col-md-8">
+
+                <label for="streetName" class="form-label">Adres</label>
+                <input type="text" [(ngModel)]="streetName"
+                       class="form-control"
+                       id="streetName"
+                       name="streetName"
+                       placeholder="Ulica"
+                       required #streetName="ngModel">
+
+
+              </div>
+              <div class="col-md-8">
+
+
+                <input type="text" [(ngModel)]="houseNumber"
+                       class="form-control"
+                       id="houseNumber"
+                       name="houseNumber"
+                       placeholder="Numer domu (i mieszkania)"
+                       required #houseNumber="ngModel">
+
+
+              </div>
+              <div class="col-md-8">
+
+                <input type="text" [(ngModel)]="cityName"
+                       class="form-control"
+                       id="cityName"
+                       name="cityName"
+                       placeholder="Miejscowość"
+                       required #cityName="ngModel">
+
+
+              </div>
+              <div class="col-md-8">
+
+
+                <input type="text" [(ngModel)]="postalCode"
+                       class="form-control"
+                       id="postalCode"
+                       name="postalCode"
+                       placeholder="Kod pocztowy"
+                       required #postalCode="ngModel">
+
+
+              </div>
+            </div>
+
+          <button type="submit" [disabled]="!userForm.form.valid"
+                  class="btn btn-info">Rejestracja
+          </button>
+
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+  </div>
 </div>
+

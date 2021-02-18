@@ -9,6 +9,10 @@ import {Observable} from 'rxjs';
 export class UserService {
 
   private usersUrl: string;
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
 
   constructor(private http: HttpClient) {
     this.usersUrl = 'http://localhost:8080';
@@ -18,8 +22,8 @@ export class UserService {
     return this.http.get<User[]>(this.usersUrl + '/users');
   }
 
-  public save(user: User) {
-    return this.http.post<User>(this.usersUrl + '/adduser', user);
+  public save(user: User): Observable<User> {
+    return this.http.post<User>(this.usersUrl + '/adduser', user, this.httpOptions);
   }
 
   public findUser(id: number): Observable<User> {
