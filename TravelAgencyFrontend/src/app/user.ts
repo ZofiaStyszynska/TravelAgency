@@ -1,6 +1,6 @@
 import {Trip} from "./trip/trip";
 
-export interface User {
+export class User {
   id: number;
   firstName: string;
   lastName: string;
@@ -11,7 +11,7 @@ export interface User {
 
 }
 
-export interface Address {
+export class Address {
   cityName: string;
   streetName: string;
   houseNumber: string;

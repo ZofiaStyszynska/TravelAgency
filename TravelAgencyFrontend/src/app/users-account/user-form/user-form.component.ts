@@ -20,9 +20,12 @@ export class UserFormComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     ) {
+    this.user = new User();
+    this.address = new Address();
 
 
   }
+
   onSubmit() {
     this.userService.save(this.user).subscribe(result => this.gotoUserList());
   }
