@@ -6,7 +6,9 @@
   margin-right: 0px;
 }
 
-.table__center {
-  width: 480px;
+
+.table__center{
+  width: 450px;
   height: auto;
+  position: center;
 }

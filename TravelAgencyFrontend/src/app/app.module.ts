@@ -18,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {TripComponent} from './trip/trip.component';
 import {TripViewComponent} from "./trip-view/trip-view.component";
 import { ContinentTripsComponent } from './continent-trips/continent-trips.component';
+import { FooterComponent } from './footer/footer.component';
 import {UserService} from "./user.service";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -47,7 +48,8 @@ const routes: Routes = [
     UserFormComponent,
     TripComponent,
     TripViewComponent,
-    ContinentTripsComponent
+    ContinentTripsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
