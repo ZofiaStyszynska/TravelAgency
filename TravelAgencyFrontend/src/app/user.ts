@@ -5,7 +5,7 @@ export class User {
   firstName: string;
   lastName: string;
   email: string;
-  address: Address
+  address: Address = new Address();
   purchasedTrips: Trip[];
 
 
