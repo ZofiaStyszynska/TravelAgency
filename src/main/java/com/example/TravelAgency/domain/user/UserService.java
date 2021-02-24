@@ -33,6 +33,10 @@ public class UserService {
                 .map(UserDTO::fromUser)
                 .collect(Collectors.toList());
     }
+    public Optional<UserDTO> getUserByEmail(String email){
+        return userRepository.findUserByEmail(email)
+                .map(UserDTO::fromUser);
+    }
 
     public Long addUser (UserDTO userDTO){
         final User user = userRepository.save(new User(
@@ -40,7 +44,10 @@ public class UserService {
                 userDTO.getLastName(),
                 userDTO.getEmail(),
                 new Address(userDTO.getAddress().getStreetName(),userDTO.getAddress().getHouseNumber(),
-                        userDTO.getAddress().getCityName(),userDTO.getAddress().getPostalCode()),new ArrayList<>()));
+                        userDTO.getAddress().getCityName(),userDTO.getAddress().getPostalCode()),
+                new ArrayList<>(),
+                userDTO.getPassword(),
+                userDTO.getUserRole()));
         return user.getId();
     }
 

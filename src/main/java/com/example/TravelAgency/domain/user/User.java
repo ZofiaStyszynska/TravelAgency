@@ -24,6 +24,9 @@ public class User extends BaseEntity {
     private String email;
     @Embedded
     private Address address;
+    private String password;
+    @Enumerated(value = EnumType.STRING)
+    private Role userRole;
 
    @OneToMany
    private List<Trip> purchasedTrips = new ArrayList<>();
