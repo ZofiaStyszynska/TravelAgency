@@ -45,9 +45,9 @@ public class UserService {
                 userDTO.getEmail(),
                 new Address(userDTO.getAddress().getStreetName(),userDTO.getAddress().getHouseNumber(),
                         userDTO.getAddress().getCityName(),userDTO.getAddress().getPostalCode()),
-                new ArrayList<>(),
                 userDTO.getPassword(),
-                userDTO.getUserRole()));
+                userDTO.getUserRole(),
+                new ArrayList<>()));
         return user.getId();
     }
 

@@ -83,10 +83,10 @@ public class MockData {
         purchasedTrips1.add(trip1);
 
 
-        User user = new User("Adam", "Niezgódka", "a.niezgodka@wp.pl", address, purchasedTrips);
+        User user = new User("Adam", "Niezgódka", "a.niezgodka@wp.pl", address, "Kosmos1", Role.USER, purchasedTrips);
         userRepository.save(user);
 
-        User user1 = new User("Ambroży", "Kleks", "a.kowalski@wp.pl", address, purchasedTrips1);
+        User user1 = new User("Ambroży", "Kleks", "a.kleks@wp.pl", address, "KaczkaDziwaczka", Role.USER,purchasedTrips1);
         userRepository.save(user1);
     }
 }
