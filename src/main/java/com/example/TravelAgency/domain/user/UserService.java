@@ -1,17 +1,21 @@
 package com.example.TravelAgency.domain.user;
 
 import com.example.TravelAgency.domain.trips.trip.TripDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class UserService {
 
     private final UserRepository userRepository;
+
+    private PasswordEncoder passwordEncoder;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -37,6 +41,12 @@ public class UserService {
         return userRepository.findUserByEmail(email)
                 .map(UserDTO::fromUser);
     }
+    public Optional<UserDTO> login(String email, String password) throws UserDoesNotExistException{
+        User user = userRepository.findUserByEmail(email).get();
+            if (user.getPassword().equals(password)) {
+                return getUserByEmail(email);
+            } else throw new UserDoesNotExistException("User does not exist");
+    }
 
     public Long addUser (UserDTO userDTO){
         final User user = userRepository.save(new User(
@@ -46,7 +56,7 @@ public class UserService {
                 new Address(userDTO.getAddress().getStreetName(),userDTO.getAddress().getHouseNumber(),
                         userDTO.getAddress().getCityName(),userDTO.getAddress().getPostalCode()),
                 userDTO.getPassword(),
-                userDTO.getUserRole(),
+                Role.USER,
                 new ArrayList<>()));
         return user.getId();
     }

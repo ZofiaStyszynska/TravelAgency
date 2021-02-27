@@ -34,7 +34,7 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
     @GetMapping("userdata/{email}")
-    public ResponseEntity<UserDTO> getUserById(@PathVariable String email){
+    public ResponseEntity<UserDTO> getUserByEmail(@PathVariable String email){
         return userService.getUserByEmail(email)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
